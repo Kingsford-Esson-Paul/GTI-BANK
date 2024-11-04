@@ -1,0 +1,290 @@
+<style>
+    .personal-banking-container { background-color: #fff; display: flex; flex-direction: column; padding: 26px 25px 0 0; }
+    @media (max-width: 991px) { .personal-banking-container { padding-right: 20px; } }
+    .content-wrapper { width: 100%; }
+    @media (max-width: 991px) { .content-wrapper { max-width: 100%; } }
+    .two-column-layout { gap: 20px; display: flex; }
+    @media (max-width: 991px) { .two-column-layout { flex-direction: column; align-items: stretch; gap: 0; } }
+    .left-column { display: flex; flex-direction: column; line-height: normal; width: 50%; margin-left: 0; }
+    @media (max-width: 991px) { .left-column { width: 100%; } }
+    .personal-banking-menu { border-radius: 5px; display: flex; margin-top: 71px; width: 100%; gap: 40px 59px; overflow: hidden; flex-wrap: wrap; padding: 20px 80px 0 30px; border: 1px dashed #9747ff; }
+    @media (max-width: 991px) { .personal-banking-menu { max-width: 100%; margin-top: 40px; padding: 0 20px; } }
+    .menu-header { align-self: start; display: flex; gap: 6px; color: #191c1f; font: 500 12px Inter, sans-serif; }
+    .menu-title { flex-grow: 1; }
+    .dropdown-icon { aspect-ratio: 2; object-fit: contain; object-position: center; width: 10px; margin: auto 0; }
+    .menu-options { display: flex; flex-direction: column; flex-grow: 1; flex-basis: 0; width: fit-content; }
+    @media (max-width: 991px) { .menu-options { max-width: 100%; } }
+    .corporate-banking-option { align-self: start; display: flex; margin-left: 10px; gap: 6px; color: #ce261b; font: 500 12px Inter, sans-serif; }
+    .options-container { background-color: #fff; margin-top: 26px; padding: 6px 80px 21px 5px; }
+    @media (max-width: 991px) { .options-container { max-width: 100%; padding-right: 20px; } }
+    .options-grid { gap: 20px; display: flex; }
+    @media (max-width: 991px) { .options-grid { flex-direction: column; align-items: stretch; gap: 0; } }
+    .options-column { display: flex; flex-direction: column; line-height: normal; width: 33%; margin-left: 0; }
+    @media (max-width: 991px) { .options-column { width: 100%; } }
+    .options-list { display: flex; flex-grow: 1; flex-direction: column; color: #191c1f; font: 300 12px Inter, sans-serif; }
+    @media (max-width: 991px) { .options-list { margin-top: 40px; } }
+    .option-item { background-color: #fff; padding: 7px 4px; }
+    @media (max-width: 991px) { .option-item { padding-right: 20px; } }
+    .right-column { display: flex; flex-direction: column; line-height: normal; width: 50%; margin-left: 20px; }
+    @media (max-width: 991px) { .right-column { width: 100%; } }
+    .hero-section { display: flex; flex-grow: 1; flex-direction: column; font-family: Inter, sans-serif; }
+    @media (max-width: 991px) { .hero-section { max-width: 100%; margin-top: 40px; } }
+    .hero-content { display: flex; flex-direction: column; position: relative; min-height: 400px; width: 100%; padding-bottom: 36px; }
+    @media (max-width: 991px) { .hero-content { max-width: 100%; } }
+    .hero-image { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; }
+    .navigation-menu { position: relative; box-shadow: -5px 4px 30px rgba(0, 0, 0, 0.03); display: flex; width: 100%; flex-direction: column; font-size: 12px; font-weight: 500; justify-content: center; padding: 14px 70px; }
+    @media (max-width: 991px) { .navigation-menu { max-width: 100%; padding: 0 20px; } }
+    .menu-content { display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between; }
+    @media (max-width: 991px) { .menu-content { max-width: 100%; } }
+    .menu-items { display: flex; align-items: center; gap: 30px; color: #191c1f; margin: auto 0; }
+    @media (max-width: 991px) { .menu-items { max-width: 100%; } }
+    .logo { aspect-ratio: 5; object-fit: contain; object-position: center; width: 145px; align-self: stretch; max-width: 100%; }
+    .menu-item { align-self: stretch; display: flex; gap: 4px; font-weight: 700; margin: auto 0; }
+    .menu-item-icon { aspect-ratio: 1.8; object-fit: contain; object-position: center; width: 9px; margin: auto 0; }
+    .user-actions { display: flex; gap: 16px; }
+    .language-selector { display: flex; align-items: center; color: #000; white-space: nowrap; margin: auto 0; }
+    @media (max-width: 991px) { .language-selector { white-space: initial; } }
+    .globe-icon { aspect-ratio: 1; object-fit: contain; object-position: center; width: 16px; align-self: stretch; margin: auto 0; }
+    .language-code { align-self: stretch; margin: auto 0; }
+    .dropdown-arrow { aspect-ratio: 1; object-fit: contain; object-position: center; width: 24px; align-self: stretch; }
+    .login-button { align-self: stretch; border-radius: 30px; background-color: #ce261b; min-height: 42px; gap: 10px; color: #fff; padding: 14px 34px; }
+    @media (max-width: 991px) { .login-button { padding: 0 20px; } }
+    .hero-title { position: relative; color: #fff; font-size: 42px; font-weight: 900; line-height: 42px; text-transform: uppercase; align-self: start; margin: 211px 0 0 148px; }
+    @media (max-width: 991px) { .hero-title { max-width: 100%; margin-top: 40px; } }
+    .product-section { align-self: end; display: flex; width: 1280px; max-width: 100%; flex-direction: column; }
+    .product-container { background-color: #fdf3f5; display: flex; width: 100%; flex-direction: column; align-items: center; justify-content: center; padding: 81px 70px; }
+    @media (max-width: 991px) { .product-container { max-width: 100%; padding: 0 20px; } }
+    .product-content { width: 980px; max-width: 100%; }
+    .product-layout { gap: 20px; display: flex; }
+    @media (max-width: 991px) { .product-layout { flex-direction: column; align-items: stretch; gap: 0; } }
+    .product-info { display: flex; margin-top: 49px; width: 100%; flex-direction: column; align-items: start; font: 400 16px Inter, sans-serif; }
+    @media (max-width: 991px) { .product-info { max-width: 100%; margin-top: 40px; } }
+    .product-title { color: #000; font-size: 42px; font-weight: 900; line-height: 1; }
+    .product-description { color: #191c1f; line-height: 1; margin-top: 15px; }
+    .cta-button { align-self: stretch; border-radius: 30px; background-color: #fdf3f5; margin-top: 20px; min-height: 42px; gap: 10px; font-size: 12px; color: #ce261b; font-weight: 500; padding: 14px 34px; border: 1px solid #ce261b; }
+    @media (max-width: 991px) { .cta-button { padding: 0 20px; } }
+    .feature-button { border-radius: 30px; background-color: #191c1f; align-self: stretch; display: flex; margin-top: 36px; gap: 20px; color: #fff; white-space: nowrap; line-height: 1; justify-content: space-between; padding: 8px 24px; }
+    @media (max-width: 991px) { .feature-button { max-width: 100%; white-space: initial; padding: 0 20px; } }
+    .feature-text { margin: auto 0; }
+    .feature-icon { aspect-ratio: 1; object-fit: contain; object-position: center; width: 24px; }
+    .requirement-button { border-radius: 30px; background-color: #191c1f; align-self: stretch; display: flex; margin-top: 5px; gap: 20px; color: #fff; white-space: nowrap; line-height: 1; justify-content: space-between; padding: 8px 24px; }
+    @media (max-width: 991px) { .requirement-button { max-width: 100%; white-space: initial; padding: 0 20px; } }
+    .requirement-text { margin: auto 0; }
+    .requirement-icon { aspect-ratio: 1; object-fit: contain; object-position: center; width: 24px; }
+    .product-image { aspect-ratio: 0.76; object-fit: contain; object-position: center; width: 100%; border-radius: 18px; flex-grow: 1; }
+    @media (max-width: 991px) { .product-image { margin-top: 40px; } }
+    .footer { background-color: #191c1f; display: flex; width: 100%; flex-direction: column; align-items: start; padding: 70px 70px 45px; }
+    @media (max-width: 991px) { .footer { max-width: 100%; padding: 0 20px; } }
+    .footer-content { display: flex; width: 988px; max-width: 100%; align-items: start; gap: 20px; justify-content: space-between; }
+    .footer-column { display: flex; margin-top: 19px; flex-direction: column; align-items: start; color: #fff; font: 400 10px Inter, sans-serif; }
+    .footer-heading { font-size: 14px; font-weight: 200; align-self: stretch; }
+    @media (max-width: 991px) { .footer-heading { margin-right: 2px; } }
+    .footer-link { margin-top: 13px; }
+    .footer-copyright { margin-top: 88px; }
+    @media (max-width: 991px) { .footer-copyright { margin-top: 40px; } }
+    .footer-divider { background-color: #8a8a8a; align-self: stretch; display: flex; width: 1px; height: 250px; }
+    .footer-logos { align-self: end; display: flex; margin-top: 56px; flex-direction: column; align-items: start; }
+    @media (max-width: 991px) { .footer-logos { margin-top: 40px; } }
+    .footer-logo { aspect-ratio: 3.47; object-fit: contain; object-position: center; width: 163px; max-width: 100%; }
+    .footer-social { align-self: stretch; display: flex; margin-top: 65px; align-items: start; gap: 22px; justify-content: start; }
+    @media (max-width: 991px) { .footer-social { margin-top: 40px; } }
+    .social-icon { aspect-ratio: 1; object-fit: contain; object-position: center; width: 18px; }
+    </style>
+    
+    <section class="personal-banking-container">
+      <div class="content-wrapper">
+        <div class="two-column-layout">
+          <div class="left-column">
+            <nav class="personal-banking-menu">
+              <div class="menu-header">
+                <h2 class="menu-title">Personal Banking</h2>
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/20e2ff4ba5ab4b8002bef17c46b57c20f6d56235a5f58677b7460b230145ae7a?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="dropdown-icon" alt="" />
+              </div>
+              <div class="menu-options">
+                <div class="corporate-banking-option">
+                  <h2 class="menu-title">Personal Banking</h2>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db1089120803ec0ed62d80470e8070582e38c44edebd111928a684f5737a9098?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="dropdown-icon" alt="" />
+                </div>
+                <div class="options-container">
+                  <div class="options-grid">
+                    <div class="options-column">
+                      <ul class="options-list">
+                        <li class="option-item">Sonho Infantil</li>
+                        <li class="option-item">Sonho de Teen</li>
+                        <li class="option-item">GTI Estudante Account</li>
+                        <li class="option-item">GTI Savings Salary Account</li>
+                        <li class="option-item">GTI Current Salary Account</li>
+                        <li class="option-item">Salary Advance</li>
+                      </ul>
+                    </div>
+                    <div class="options-column">
+                      <ul class="options-list">
+                        <li class="option-item">GTI Premium Account</li>
+                        <li class="option-item">GTI HNI Account</li>
+                        <li class="option-item">GTI Ela Savings Account</li>
+                        <li class="option-item">GTI Ela Current Account</li>
+                        <li class="option-item">GTI Diaspora Account</li>
+                      </ul>
+                    </div>
+                    <div class="options-column">
+                      <ul class="options-list">
+                        <li class="option-item">Target Savings Account</li>
+                        <li class="option-item">Safe Lock</li>
+                        <li class="option-item">Group Savings Account</li>
+                        <li class="option-item">Com./District Savings Acc.</li>
+                        <li class="option-item">Community Current Account</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="right-column">
+            <div class="hero-section">
+      <div class="hero-content">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d41d00308e551ac6791801791a39a085febf214a198f3058d93d210c936b2fb8?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="hero-image" alt="Hero background image" />
+        <nav class="navigation-menu">
+          <div class="menu-content">
+            <div class="menu-items">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8a8735fba8b5999e29e7c17a1eb4f0bab36320e628b346b906d6c3b149c7c6dc?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="logo" alt="Company logo" />
+              <div class="menu-item">
+                <h2 class="menu-title">Personal Banking</h2>
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/20e2ff4ba5ab4b8002bef17c46b57c20f6d56235a5f58677b7460b230145ae7a?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="dropdown-icon" alt="" />
+              </div>
+              <div class="menu-item">
+                <h2 class="menu-title">Corporate Banking</h2>
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/50fe873f183dc458d6c9bdbfbdd29508d2fc4698420262875fe288e524622555?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="menu-item-icon" alt="" />
+              </div>
+              <div class="menu-item">
+                <h2 class="menu-title">Digital Banking</h2>
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0e7338ae3d6d7020e0230cc5e6e201edda9932d6d23f142b2c76e4f78adf40bf?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="dropdown-icon" alt="" />
+              </div>
+            </div>
+            <div class="user-actions">
+              <div class="language-selector">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0379b9174026cd579ce51641d3afd40bb62ed379e3988fbadb9d7fc76cbb8375?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="globe-icon" alt="Language globe icon" />
+                <span class="language-code">EN</span>
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5d6ad1702afe381ad3a1b464f39f25185982b2eac4cd445c09e6249140ac6cd?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="dropdown-arrow" alt="" />
+              </div>
+              <button class="login-button">Log in</button>
+            </div>
+          </div>
+        </nav>
+        <h1 class="hero-title">LET'S SAVE.<br />let's grow together.</h1>
+      </div>
+    </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-section">
+        <div class="product-container">
+          <div class="product-content">
+            <div class="product-layout">
+              <div class="left-column">
+                <div class="product-info">
+                  <h2 class="product-title">Sonho Infantil</h2>
+                  <p class="product-description">In trust for Children from 0-12 years</p>
+                  <button class="cta-button">Open Account</button>
+                  <button class="feature-button">
+                    <span class="feature-text">Features</span>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d976ddf6080f4904bfc9cc0f2b71374a716453cb281aaf9304bfd249d97579fe?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="feature-icon" alt="" />
+                  </button>
+                  <button class="requirement-button">
+                    <span class="requirement-text">Requirements</span>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d976ddf6080f4904bfc9cc0f2b71374a716453cb281aaf9304bfd249d97579fe?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="requirement-icon" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="right-column">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ac5759c349db04ea97f6867cf710cedfada68ae0ff18f6f8d93a439ae5e6245?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="product-image" alt="Sonho Infantil product illustration" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-container">
+          <div class="product-content">
+            <div class="product-layout">
+              <div class="left-column">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/898a600a42f4b6cf8858d7c5df8d06b87004a6cb75b32deb4b7f60c513d864c8?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="product-image" alt="Sonho de Teen product illustration" />
+              </div>
+              <div class="right-column">
+                <div class="product-info">
+                  <h2 class="product-title">Sonho de Teen</h2>
+                  <p class="product-description">In trust for Children from 13-17 years</p>
+                  <button class="cta-button">Open Account</button>
+                  <button class="feature-button">
+                    <span class="feature-text">Features</span>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d976ddf6080f4904bfc9cc0f2b71374a716453cb281aaf9304bfd249d97579fe?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="feature-icon" alt="" />
+                  </button>
+                  <button class="requirement-button">
+                    <span class="requirement-text">Requirements</span>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d976ddf6080f4904bfc9cc0f2b71374a716453cb281aaf9304bfd249d97579fe?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="requirement-icon" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat similar structure for other products -->
+        <!-- GTI Estudante Account -->
+        <!-- GTI Savings Salary Account -->
+        <!-- GTI Current Salary Account -->
+        <!-- Salary Advance -->
+        <!-- GTI Premium Account -->
+        <!-- GTI HNI Account -->
+        <!-- GTI Ela Savings Account -->
+        <!-- GTI Ela Current Account -->
+        <!-- GTI Diaspora Account -->
+        <!-- Target Savings Account -->
+        <!-- Safe Lock -->
+        <!-- Group Savings Account -->
+        <!-- GTI Community/District Savings Account -->
+        <!-- GTI Community Current Account -->
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-heading">Digital Banking</h3>
+            <a href="#" class="footer-link">Digital Platforms</a>
+            <a href="#" class="footer-link">POS</a>
+            <a href="#" class="footer-link">Card Personalization</a>
+            <a href="#" class="footer-link">Security Center</a>
+            <p class="footer-copyright">© 2024 GTI BANK</p>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+            <a href="#" class="footer-link">Personal Banking</a>
+            <a href="#" class="footer-link">Corporate Banking</a>
+            <a href="#" class="footer-link">Locate ATMs</a>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">About GTI Bank</h3>
+            <a href="#" class="footer-link">Corporate Profile</a>
+            <a href="#" class="footer-link">Mission, Vision & Values</a>
+            <a href="#" class="footer-link">FAQs</a>
+            <a href="#" class="footer-link">Contact Us</a>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">Get in Touch</h3>
+            <p class="footer-link">Rua da Guiné, São Tome, C.P. 54</p>
+            <p class="footer-link">+2399073561</p>
+            <p class="footer-link">+233 552 529659</p>
+            <a href="mailto:info@gtibank.com" class="footer-link">info@gtibank.com</a>
+          </div>
+          <div class="footer-divider"></div>
+          <div class="footer-logos">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/747d4aa514fdbd9d42bebf355c255ee22c09b06192948a6ee0bd0d92d04f2bdb?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="footer-logo" alt="GTI Bank logo" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/38299ee9d193b53da94e9dd98030740616e5b861c6da5f90207b1d5a419d3ea6?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="footer-logo" alt="GTI Bank secondary logo" />
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4e6c71b5500d63b74c3937dba786fe60e6af53bf2248f1ba7904ce7ceb5a214?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="social-icon" alt="" /></a>
+              <a href="#" aria-label="Twitter"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/265831863bc80a1bd9aa95317ab0925caef80ba9095d2f0c21a5cbb5d47a2492?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="social-icon" alt="" /></a>
+              <a href="#" aria-label="Instagram"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e3576773d865a8a37f5d1c32e6e463af43b8321ecd691f7887fc6239fe453c42?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="social-icon" alt="" /></a>
+              <a href="#" aria-label="LinkedIn"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/48d8eddadb24d8d7f7c3966a6836fe9ea50d5c8269c685596b237f58f896b16c?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="social-icon" alt="" /></a>
+              <a href="#" aria-label="YouTube"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2756579ad413ef5ce32d3f74ebf5c3a09955a0b3c58838f64b2b45ae37371a93?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="social-icon" alt="" /></a>
+              <a href="#" aria-label="WhatsApp"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/23240773349fd517bf582b8d99ddece88bf73263af33024ff8ed8c00cb9d1bfb?placeholderIfAbsent=true&apiKey=196ca47f0aee442985e230d6049b96e5" class="social-icon" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dissolve Background Transition</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.homepage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  animation: backgroundDissolve 10s infinite; /* Longer animation for 10s per image */
+}
+.content-wrapper{
+  max-width: 100%;
+  padding: 100px 20px;
+}
+    
+.text-container {
+  margin-bottom: 10px;
+}
+    
+.hero-title {
+  max-width: 100%;
+  font-size: 40px;
+  line-height: 45px;
+}
+.hero-description {
+  max-width: 100%;
+}
+
+/* Keyframes for the dissolve/fade effect */
+@keyframes backgroundDissolve {
+  0%, 30% {
+    background-image: url('/imgs/Banner 1.png'); /* First image visible for 10 seconds */
+    opacity: 1;
+  }
+  33%, 36% {
+    opacity: 1; /* Fade out first image */
+  }
+  40%, 70% {
+    background-image: url('/imgs/Banner 2.png'); /* Second image visible for 10 seconds */
+    opacity: 1;
+  }
+  73%, 76% {
+    opacity: 1; /* Fade out second image */
+  }
+  80%, 100% {
+    background-image: url('/imgs/Banner 4.png'); /* Third image visible for 10 seconds */
+    opacity: 1;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="homepage">
+    <div class="content-wrapper">
+      <div class="text-container">
+        <h1 class="hero-title">Open an Account <br /> Anywhere.</h1>
+        <p class="hero-description">Open an account today and enjoy flexibly banking experience.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
