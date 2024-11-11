@@ -153,6 +153,7 @@ a{
     display: flex;
     flex-direction: column;
     padding: 94px 15px;
+    background: linear-gradient(360deg, #FDF3F5 31.36%, #FFFFFF 100%);
   }
 
   .features-header {
@@ -378,6 +379,7 @@ a{
     display: flex;
     flex-direction: column;
     padding: 94px 15px 60px;
+    background: linear-gradient(360deg, #FDF3F5 31.36%, #FFFFFF 100%);
   }
 
   .explore-header {
@@ -441,6 +443,7 @@ a{
     padding: 10px 35px;
   }
   .footer {
+    align-self: center;
     background-color: #191c1f;
     display: grid;
     width: 100%;
@@ -536,6 +539,9 @@ a{
 
   /* ------CSS for Desktop/Large Screen View----------- */
 
+
+  
+
   @media (min-width: 991px){
     .features-section{
       padding: 94px 90px 54px;
@@ -555,10 +561,52 @@ a{
       flex-direction: row;
       gap: 20px;
     }
-    .atm-container {
-      width: 984px;
-    }
+    .atm-section {
+      align-items: center;
+    }  
     .atm-content {
       flex-direction: row;
+      width: 50%;
+      align-items: start;
+      justify-items: center;
+      padding: 0rem 5rem;
     }
+    .atm-image {
+      aspect-ratio: 1;
+    }  
+    .atm-title{
+      font-size: 4rem;
+      text-align: start;
+    }
+    .atm-button{
+      align-self: start;
+      padding: 14px 34px;
+    }
+    .explore-section {
+      padding: 94px 90px 54px;
+    }
+    .footer {
+      padding: 70px 70px 45px;
+    }
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+  
+    .footer-right{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+    .footer-separator-1 {
+      background-color: #8a8a8a;
+      align-self: stretch;
+      display: flex;
+      width: 1px;
+      height: 250px;
+      }
+      .footer-separator{
+        display: none;
+      }
   }
