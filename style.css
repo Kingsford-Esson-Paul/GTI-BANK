@@ -610,3 +610,229 @@ a{
         display: none;
       }
   }
+
+
+
+
+
+
+
+
+
+  /* ----------------Personal-Banking----------------- */
+
+  .personal-banking-container {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .content-wrapper-pb {
+    width: 100%;
+  }
+  .hero-section2 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    padding-bottom: 36px;
+  }
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero-title {
+    position: relative;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 42px;
+    text-transform: uppercase;
+    align-self: start;
+    max-width: 100%;
+    margin: 211px 0 0 14px;
+  }
+
+  .product-section {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .product-container {
+    background-color: #fdf3f5;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+  .product-content {
+    max-width: 100%;
+  }
+
+  .product-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .product-info {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: start;
+    font: 400 16px Inter, sans-serif;
+  }
+
+  
+  .product-title {
+    color: #000;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .product-description {
+    color: #191c1f;
+    line-height: 1;
+    margin-top: 15px;
+  }
+
+  .cta-button {
+    align-self: stretch;
+    border-radius: 30px;
+    background-color: #fdf3f5;
+    margin-top: 20px;
+    min-height: 42px;
+    gap: 10px;
+    font-size: 12px;
+    color: #ce261b;
+    font-weight: 500;
+    padding: 14px 34px;
+    border: 1px solid #ce261b;
+  }
+  .feature-button {
+    border-radius: 30px;
+    background-color: #191c1f;
+    align-self: stretch;
+    display: flex;
+    margin-top: 36px;
+    gap: 20px;
+    color: #fff;
+    white-space: initial;
+    line-height: 1;
+    justify-content: space-between;
+    padding: 10px 24px;
+    cursor: pointer;
+  }
+  
+  .feature-text {
+    margin: auto 0;
+  }
+  .feature-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+  .content {
+    display: none;
+    padding: 10px;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 60px;
+    list-style-type: decimal;
+    font: 400 14px Inter, sans-serif;
+    line-height: 25.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #404549;
+
+    
+  }
+  .requirement-button {
+    border-radius: 30px;
+    background-color: #191c1f;
+    align-self: stretch;
+    display: flex;
+    margin-top: 5px;
+    gap: 20px;
+    color: #fff;
+    white-space: initial;
+    line-height: 1;
+    justify-content: space-between;
+    padding: 10px 24px;
+    cursor: pointer;
+  }
+  .requirement-text {
+    margin: auto 0;
+  }
+  .requirement-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+
+  .product-image {
+    aspect-ratio: 0.76;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 18px;
+    flex-grow: 1;
+    margin-top: 40px;
+  }
+  .left-column{
+    position: relative;
+    inset: 1;
+  }
+  .feature-button.active, .requirement-button.active {
+    background-color: #fff; 
+    color: rgb(154, 145, 145);
+    border-radius: 0;
+    border: none;
+  }
+
+
+
+  @media (min-width: 991px) {
+  
+    .product-container {
+      padding: 81px 70px;
+    }
+    .hero-title{
+      margin: 270px 50px 0 190px;
+    }
+    .product-content {
+      max-width: 80%;
+    }
+    .cta-button {
+      width: 40%;
+    }
+    .product-layout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15%;
+    }
+    .product-info {
+      margin-top: 8rem;
+    }
+  }
