@@ -4,6 +4,24 @@
     margin: 0;
 }
 
+/* h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}  
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+  .box {
+  padding: clamp(10px, 5vw, 30px);
+}
+
+.container {
+  width: clamp(300px, 50%, 1200px);
+}
+*/
+
 img{
     max-width: 100%;
 }
@@ -756,14 +774,14 @@ a{
     padding: 10px;
     width: 100%;
     background-color: #f9f9f9;
-    padding: 10px 60px;
+    padding: 10px 50px;
     list-style-type: decimal;
     font: 400 14px Inter, sans-serif;
     line-height: 25.2px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #404549;
+    color: #191C1F;
 
     
   }

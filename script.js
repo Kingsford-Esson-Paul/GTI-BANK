@@ -22,6 +22,8 @@
 
 // Get buttons and content elements
 
+
+
 for (let i = 1; i <= 32; i++) {
   const btn = document.getElementById(`btn${i}`);
   const content = document.getElementById(`content${i}`);
@@ -33,15 +35,22 @@ for (let i = 1; i <= 32; i++) {
 
 // Toggle visibility for Lists
 function toggleContent(button, content, activeClass) {
+  const icon = button.querySelector('.feature-icon'); // Target the icon inside the button
+
   button.addEventListener('click', () => {
-    const isHidden = content.style.display === 'none' || content.style.display === '';
-    content.style.display = isHidden ? 'block' : 'none';
-    
-    // Toggle active class for the button
-    if (isHidden) {
-      button.classList.add(activeClass);
-    } else {
-      button.classList.remove(activeClass);
+    const isContentVisible = content.style.display === 'block';
+
+    // Toggle the content visibility
+    content.style.display = isContentVisible ? 'none' : 'block';
+
+    // Add/remove the active class for styling
+    button.classList.toggle(activeClass, !isContentVisible);
+
+    // Change the icon image based on visibility
+    if (icon) {
+      icon.src = isContentVisible
+        ? '/imgs/Caret down.png' // Default image when content is hidden
+        : '/imgs/Caret UP.png'; // Alternate image when content is shown
     }
   });
 }
