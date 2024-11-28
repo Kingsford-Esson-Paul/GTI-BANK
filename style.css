@@ -53,11 +53,7 @@ a{
   }
   .content-wrapper{
     max-width: 100%;
-    padding: 100px 20px;
-  }
-      
-  .text-container {
-    margin-bottom: 10px;
+   
   }
       
   .hero-title {
@@ -123,7 +119,8 @@ a{
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
-    text-align: center;
+    text-align: start;
+    align-self: stretch;
   }
 
   .cta-buttons {
@@ -137,7 +134,7 @@ a{
     text-transform: uppercase;
   }
 
-  .cta-button {
+  .cta-button-idex {
     border-radius: 20px;
     background-color: #e3352a;
     display: flex;
@@ -322,7 +319,7 @@ a{
 
   .more-services-section {
     background-color: #ce261b;
-    padding: 15px;
+    padding: 5% 0;
   }
 
   .more-services-container {
@@ -345,17 +342,19 @@ a{
     text-transform: uppercase;
     align-self: center;
     text-align: center;
+    margin-bottom: 30px;
     font: 800 42px/1 Inter, sans-serif;
   }
 
   .more-services-grid {
-    margin-top: 43px;
-    width: 1200px;
+    margin-top: 43px 10px;
+    /* width: 1230px; */
     max-width: 100%;
+    padding: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
   }
   .service-card {
     align-self: center;
@@ -366,20 +365,22 @@ a{
     position: relative;
     border-radius: 20px;
     background-color: #fff;
-    padding: 43px 25px 18px;
-    margin-bottom: 30px;
+    padding: 00px;
+    /* margin-bottom: 30px; */
   }
-  .service-title {
+  .service-title-index {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 16px;
+    color: #3f3c3c;
   }
   
-  .service-description {
+  .service-description-index {
     font-size: 14px;
     font-weight: 300;
     line-height: 18px;
     margin-bottom: 15px;
+    color: #515050;
   }
   
   .service-icon {
@@ -526,7 +527,7 @@ a{
     display: flex;
     margin-top: 56px;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     gap: 20px;
   }
 
@@ -578,6 +579,10 @@ a{
       display: flex;
       flex-direction: row;
       gap: 20px;
+    }
+    .more-services-grid{
+      grid-template-columns: repeat(3, 1fr);
+      width: 90%;
     }
     .atm-section {
       align-items: center;
@@ -690,6 +695,7 @@ a{
     margin-bottom: 2rem;
   }
   .product-container {
+    align-self: center;
     background-color: #fdf3f5;
     display: flex;
     width: 100%;
@@ -724,6 +730,7 @@ a{
     font-size: 42px;
     font-weight: 900;
     line-height: 1;
+    width: inherit;
   }
 
   .product-description {
@@ -736,7 +743,7 @@ a{
     align-self: stretch;
     border-radius: 30px;
     background-color: #fdf3f5;
-    margin-top: 20px;
+    margin-top: 80px;
     min-height: 42px;
     gap: 10px;
     font-size: 12px;
@@ -848,9 +855,196 @@ a{
     .product-layout {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 15%;
+      gap: 10%;
     }
     .product-info {
       margin-top: 8rem;
     }
   }
+
+
+
+  /* -------------- Digital Banking css    ------------ */
+
+
+  .banking-section {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .header-container {
+    display: none;
+    background: #191c1f;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 1px 0;
+  }
+  .hero-section-db {
+    align-self: end;
+    margin-top: 26px;
+    width: 100%;
+    max-width: 1179px;
+  }
+  
+  .hero-content.db {
+    display: grid;
+    position: absolute;
+    min-height: auto;
+    width: 100%;
+    padding-bottom: 0%;
+  }
+  
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
+    color: #fff;
+    margin: auto;
+    justify-content: flex-end;
+    position: absolute;
+    inset: 1;
+  }
+  
+  .hero-title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 45px;
+    text-transform: uppercase;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  
+  .hero-image.db {
+    aspect-ratio: 0.45;
+    object-fit: contain;
+    width: 100%;
+    position: absolute;
+    inset: 1;
+    height: fit-content;
+  }
+  
+  .services-section {
+    background: #191c1f;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .service-container {
+    width: 100%;
+    margin: 4rem 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .service-content-index {
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 43px 25px 18px;
+  }
+
+  .service-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-image {
+    aspect-ratio: 0.76;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 18px;
+    margin-top: 40px;
+  }
+  
+  .service-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 1.5rem 0;
+    font: 16px Inter, sans-serif;
+  }
+  
+  .service-label {
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+  }
+  
+  .service-title {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin-top: 7px;
+  }
+  
+  .service-description {
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  .app-download{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80%;
+    align-self: center;
+  }
+  
+  .cta-button.db {
+    margin-top: 40px;
+    color: #191c1f;
+    border-color: #000;
+    width: 70%;
+    align-self: center;
+  }
+
+  @media (min-width: 991px) {
+    .service-container {
+      margin: 0rem;
+    }
+    .service-content {
+      align-self: center;
+      margin: 0 10%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5%;
+      align-items: center;
+      justify-content: center;
+    }
+    .service-text{
+      align-items: start;
+    }
+    .service-title{
+      text-align: start;
+    }
+    .service-image{
+      height: 70%;
+    }
+    .service-description{
+      width: 70%;
+      text-align: start;
+    }
+    .app-download{
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      width: 15%;
+      align-self: start;
+    }
+  } 
