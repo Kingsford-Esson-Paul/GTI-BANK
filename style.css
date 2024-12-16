@@ -270,6 +270,18 @@ a{
     max-width: 100%;
     padding: 5px 20px;
   }
+  .hero-text {
+    width: 80%;
+  } 
+  .hero-text h1{
+    font-weight: bold;
+    font-size: 2rem !important;
+  }
+  .hero-text p{
+    width: 80%;
+    font-size: 1rem !important;
+    line-height: 150% !important;
+  }
   
   .nav-content {
     max-width: 100%;
