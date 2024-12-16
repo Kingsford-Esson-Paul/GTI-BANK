@@ -22,7 +22,12 @@
 
 // Get buttons and content elements
 
-
+function toggleMenu() {
+  const navLinks = document.getElementById("navLink");
+  const userControls = document.getElementById("userControl");
+  navLinks.classList.toggle("active");
+  userControls.classList.toggle("active");
+}
 
 for (let i = 1; i <= 32; i++) {
   const btn = document.getElementById(`btn${i}`);

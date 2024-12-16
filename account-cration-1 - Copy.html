@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .account-section {
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .header-container {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          /* min-height: 200px; */
+          padding-bottom: 5px;
+          height: 473px;
+          background-color: aqua;
+          font-family: Inter, sans-serif;
+        }
+        
+        .hero-image-ac {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          object-fit: cover;
+        }
+        
+        .hero-title {
+          position: relative;
+          color: #fff;
+          font-size: 42px;
+          font-weight: 900;
+          line-height: 1;
+          text-transform: uppercase;
+          align-self: start;
+          margin: 239px 0 0 101px;
+        }
+        .breadcrumb-item, .breadcrumb-current{
+          color: #fff;
+        }
+        
+        .form-section {
+          background-color: #fdf3f5;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          font-family: Inter, sans-serif;
+          padding: 0 80px 169px;
+        }
+        
+        .form-container {
+          display: flex;
+          margin-bottom: -34px;
+          width: 861px;
+          max-width: 100%;
+          flex-direction: column;
+        }
+        
+        .breadcrumb {
+          background-color: #191c1f;
+          align-self: start;
+          display: flex;
+          gap: 11px;
+          font-size: 12px;
+          color: #fff;
+          font-weight: 300;
+          line-height: 1;
+          padding: 6px 35px;
+        }
+        
+        .breadcrumb-item {
+          flex-grow: 1;
+        }
+        
+        .breadcrumb-current {
+          font-weight: 500;
+        }
+        
+        .form-content {
+          align-self: end;
+          display: flex;
+          margin-top: 37px;
+          width: 644px;
+          max-width: 100%;
+          flex-direction: column;
+          align-items: start;
+          color: #000;
+          font-weight: 400;
+        }
+        
+        .form-label {
+          font-size: 16px;
+          line-height: 28px;
+        }
+        
+        .form-input {
+          border-radius: 9px;
+          align-self: stretch;
+          margin-top: 9px;
+          font-size: 12px;
+          color: #8a8a8a;
+          line-height: 22px;
+          padding: 13px 24px;
+          border: 1px solid #bdbdbd;
+        }
+        
+        .radio-group {
+          display: flex;
+          gap: 9px;
+          font-size: 17px;
+          font-weight: 300;
+          line-height: 30px;
+          margin: 11px 0 0 12px;
+        }
+        
+        .radio-input {
+          border-radius: 7px;
+          display: flex;
+          width: 22px;
+          height: 21px;
+          margin: auto 0;
+          border: 1px solid #8a8a8a;
+        }
+        
+        .file-upload {
+          display: flex;
+          margin-top: 9px;
+          width: 224px;
+          max-width: 100%;
+          gap: 5px;
+        }
+        
+        .file-btn {
+          align-self: stretch;
+          border-radius: 9px;
+          background-color: #e9e9e9;
+          min-height: 48px;
+          font-size: 12px;
+          line-height: 22px;
+          padding: 13px 24px;
+          border: 1px solid #bdbdbd;
+        }
+        
+        .file-text {
+          font-size: 14px;
+          line-height: 25px;
+          margin: auto 0;
+        }
+        
+        .submit-btn {
+          align-self: stretch;
+          border-radius: 30px;
+          background-color: #191c1f;
+          margin-top: 48px;
+          min-height: 42px;
+          font-size: 12px;
+          color: #fff;
+          font-weight: 500;
+          padding: 14px 34px;
+        }
+        
+        
+        
+        @media (max-width: 991px) {
+          .account-section {
+            padding: 0 20px;
+          }
+          
+          .header-container {
+            max-width: 100%;
+          }
+          
+          .nav-container {
+            max-width: 100%;
+            padding: 0 20px;
+          }
+          
+          .nav-content {
+            max-width: 100%;
+          }
+          
+          .nav-links {
+            max-width: 100%;
+          }
+          
+          .language-selector {
+            white-space: initial;
+          }
+          
+          .login-btn {
+            padding: 0 20px;
+          }
+          
+          .hero-title {
+            margin: 40px 0 0 10px;
+          }
+          
+          .form-section {
+            max-width: 100%;
+            padding: 0 20px 100px;
+          }
+          
+          .form-container {
+            margin-bottom: 10px;
+          }
+          
+          .breadcrumb {
+            padding: 0 30px;
+          }
+          
+          .form-input {
+            max-width: 100%;
+            padding: 0 20px;
+          }
+          
+          .submit-btn {
+            margin-top: 40px;
+            padding: 0 20px;
+          }
+          
+
+        }
+        </style>
+    
+</head>
+
+<body>
+    <div class="account-section">
+      <nav class="navigation-header" role="navigation" aria-label="Main navigation">
+        <div class="navigation-container">
+          <div class="nav-content">
+            <div class="nav-links">
+              <a href="/index.html">
+                <div class="" role="button" tabindex="0">
+                  <img src="/imgs/logo.png" alt="Bank Logo" class="brand-logo" />
+                </div>
+              </a>
+              <a href="/personal-banking.html">
+                <div class="nav-item" role="button" tabindex="0">
+                  <span class="nav-text">Personal Banking</span>
+                  <img src="/imgs/Caret UP - Copy.png" alt="" class="dropdown-icon" aria-hidden="true" />
+                </div>
+              </a>
+              
+              <a href="/corporate-banking.html">
+                <div class="nav-item" role="button" tabindex="0">
+                  <span class="nav-text">Corporate Banking</span>
+                  <img src="/imgs/Caret UP - Copy.png" alt="" class="dropdown-icon" aria-hidden="true" />
+                </div>
+              </a>
+              
+              <a href="/digital-banking.html">
+                <div class="nav-item" role="button" tabindex="0">
+                  <span class="nav-text">Digital Banking</span>
+                  <img src="/imgs/Caret UP - Copy.png" alt="" class="dropdown-icon" aria-hidden="true" />
+                </div>
+              </a>
+            </div>
+            
+            <div class="user-controls">
+              <div class="language-selector" role="button" tabindex="0" aria-label="Change language">
+                <img src="/imgs/Mask group.png" alt="" class="globe-icon" aria-hidden="true" />
+                <span class="language-code">EN</span>
+                <img src="/imgs/Caret UP1.png" alt="" class="dropdown-icon" aria-hidden="true" />
+              </div>
+              <button class="login-button" aria-label="Log in to your account">Log in</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+        <div class="header-container">
+          <img src="/imgs/Rectangle 3403.png" alt="" class="hero-image-ac" />
+          <h1 class="hero-title">Open account</h1>
+        </div>
+        
+        <main class="form-section">
+          <div class="form-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/index.html">
+                <div class="breadcrumb-item">GTI Bank ></div>
+              </a>
+              <a href="/personal-banking.html">
+                <div class="breadcrumb-item">Personal Banking ></div>
+              </a>
+              <a href="/account-cration-1.html">
+                <div class="breadcrumb-current">Open Account</div>
+              </a>
+            </nav>
+            
+            <form class="form-content">
+              <label for="surname" class="form-label">Surname<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="text" id="surname" required class="form-input" />
+              
+              <label for="middlename" class="form-label">Middle name<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="text" id="middlename" required class="form-input" />
+              
+              <label for="lastname" class="form-label">Last name<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="text" id="lastname" required class="form-input" />
+              
+              <label for="aka" class="form-label">a.k.a</label>
+              <input type="text" id="aka" class="form-input" />
+              
+              <label for="dob" class="form-label">Date of Birth<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="date" id="dob" required class="form-input" />
+              
+              <fieldset>
+                <legend class="form-label">Gender</legend>
+                <div class="radio-group">
+                  <input type="radio" id="male" name="gender" class="radio-input" />
+                  <label for="male">Male</label>
+                </div>
+                <div class="radio-group">
+                  <input type="radio" id="female" name="gender" class="radio-input" />
+                  <label for="female">Female</label>
+                </div>
+              </fieldset>
+              
+              <label for="phone" class="form-label">Telephone number<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="tel" id="phone" required class="form-input" />
+              
+              <label for="altphone" class="form-label">Telephone number (Alternative)</label>
+              <input type="tel" id="altphone" class="form-input" />
+              
+              <label for="email" class="form-label">Email address<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="email" id="email" required class="form-input" />
+              
+              <label for="region" class="form-label">Region of residence<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <select id="region" required class="form-input">
+                <option value="">-Select-</option>
+              </select>
+              
+              <label for="address1" class="form-label">Address Line 1<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="text" id="address1" required class="form-input" />
+              
+              <label for="address2" class="form-label">Address Line 2<span aria-hidden="true" style="color: #ce261b">*</span></label>
+              <input type="text" id="address2" required class="form-input" />
+              
+              <label for="photo" class="form-label">Passport Photo</label>
+              <div class="file-upload">
+                <input type="file" id="photo" accept="image/*" class="visually-hidden" />
+                <label for="photo" class="file-btn">Choose File</label>
+                <span class="file-text">No file chosen</span>
+              </div>
+              
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </main>
+        
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-columns">
+              <div class="footer-column">
+                <h4 class="footer-heading">Digital Banking</h4>
+                <a href="#" class="footer-link">Digital Platforms</a>
+                <a href="#" class="footer-link">POS</a>
+                <a href="#" class="footer-link">Card Personalization</a>
+                <a href="#" class="footer-link">Security Center</a>
+                <p class="footer-link">© 2024 GTI BANK</p>
+              </div>
+              <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <a href="#" class="footer-link">Personal Banking</a>
+                <a href="#" class="footer-link">Corporate Banking</a>
+                <a href="#" class="footer-link">Locate ATMs</a>
+              </div>
+            </div>
+            <div class="footer-columns">
+              <div class="footer-column">
+                <h4 class="footer-heading">About GTI Bank</h4>
+                <a href="#" class="footer-link">Corporate Profile</a>
+                <a href="#" class="footer-link">Mission, Vision & Values</a>
+                <a href="#" class="footer-link">FAQs</a>
+                <a href="#" class="footer-link">Contact Us</a>
+              </div>
+              <div class="footer-column">
+                <h4 class="footer-heading">Get in Touch</h4>
+                <p class="footer-link">Rua da Guiné, São Tome, C.P. 54</p>
+                <p class="footer-link">+2399073561</p>
+                <p class="footer-link">+233 552 529659</p>
+                <a href="mailto:info@gtibank.com" class="footer-link">info@gtibank.com</a>
+              </div>
+            </div>
+          </div>  
+          <div class="footer-separator"></div>
+          <div class="footer-right">
+            <div class="footer-separator-1"></div>
+            <div class="footer-logo-container">
+              <img src="/imgs/Apple store.png" alt="GTI Bank Logo" class="footer-logo">
+              <img src="/imgs/Google.png" alt="GTI Bank Logo Alternative" class="footer-logo">
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook"><img src="/imgs/Facebook.png" alt="Facebook" class="social-icon"></a>
+                <a href="#" aria-label="Twitter"><img src="/imgs/twiter.png" alt="Twitter" class="social-icon"></a>
+                <a href="#" aria-label="Instagram"><img src="/imgs/instagram.png" alt="Instagram" class="social-icon"></a>
+                <a href="#" aria-label="LinkedIn"><img src="/imgs/LinkedIn.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="#" aria-label="YouTube"><img src="/imgs/YouTube.png" alt="YouTube" class="social-icon"></a>
+                <a href="#" aria-label="WhatsApp"><img src="/imgs/tiktok.png" alt="WhatsApp" class="social-icon"></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+</body>
+</html>
