@@ -1271,7 +1271,7 @@ a{
       width: 100%;
       justify-content: space-between;
     }
-    .hero-text {
+    .hero-text-db {
       display: flex;
       align-items: start;
       flex-direction: column;
