@@ -1165,6 +1165,7 @@ a{
     .feature-icon,.requirement-icon{
       width: 2vw;
     }
+    
   }
 
 
@@ -1259,7 +1260,7 @@ a{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 80%;
+    width: 50%;
     align-self: center;
   }
   
