@@ -1026,7 +1026,7 @@ a{
   
   .product-title {
     color: #000;
-    font-size: 42px;
+    font-size: 35px !important;
     font-weight: 900;
     line-height: 1;
     width: inherit;
@@ -1162,6 +1162,9 @@ a{
     .product-info{
       margin-top: 25%;
     }
+    .product-title{
+      font-size: 2.6vw !important;
+    }
     .feature-icon,.requirement-icon{
       width: 2vw;
     }
@@ -1238,7 +1241,7 @@ a{
   }
   
   .service-title {
-    font-size: 42px;
+    font-size: 35px !important;
     font-weight: 900;
     line-height: 42px;
     text-transform: uppercase;
@@ -1338,6 +1341,8 @@ a{
       align-items: start;
     }
     .service-title{
+      font-size: 2.6vw !important;
+      line-height: 100% !important;
       text-align: start;
     }
     .service-image{
