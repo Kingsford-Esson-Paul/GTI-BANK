@@ -417,6 +417,7 @@ a{
   }
   .button-icon img{
     object-fit: contain;
+    object-position: center;
     padding: 0.5rem;
   }
 
