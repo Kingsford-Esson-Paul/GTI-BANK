@@ -110,7 +110,7 @@ a{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8px 70px;
+  padding: 15px 70px;
   
 }
 .navigation-container.db{
@@ -151,7 +151,7 @@ a{
   aspect-ratio: 5;
   object-fit: contain;
   object-position: center;
-  width: 13vw;
+  width: 15vw;
   margin-top: 1.5%;
   align-self: stretch;
   margin-right: 3%;
@@ -268,7 +268,7 @@ a{
 @media (max-width: 991px) {
   .navigation-container {
     max-width: 100%;
-    padding: 5px 20px;
+    padding: 15px 20px;
   }
   .hero-text {
     width: 80%;
@@ -287,7 +287,7 @@ a{
     max-width: 100%;
   }
   .brand-logo {
-    width: 30vw;
+    width: 40vw;
   }
   
   .nav-links {
