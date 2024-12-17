@@ -302,7 +302,6 @@ a{
     width: 100%;
     position: absolute;
     align-items: center;
-    
     left: 0;
   }
   .navLink{
@@ -381,7 +380,7 @@ a{
   }
 
   .cta-description {
-    font-size: 1.07vw !important;
+    /* font-size: 1.07vw !important; */
     font-weight: 400;
     line-height: 1;
     text-align: start;
@@ -448,7 +447,6 @@ a{
     font: 800 42px/1 Inter, sans-serif;
     text-align: center;
   }
-
   .features-description {
     align-self: stretch;
     color: #191c1f;
@@ -468,10 +466,11 @@ a{
   }
 
   .feature-card {
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #fff;
     display: flex;
     flex-grow: 1;
+    margin-top: 1.5rem;
     padding-bottom: 59px;
     flex-direction: column;
     font-family: Inter, sans-serif;
@@ -667,6 +666,7 @@ a{
     flex-direction: column;
     padding: 94px 15px 60px;
     background: linear-gradient(360deg, #FDF3F5 31.36%, #FFFFFF 100%);
+ 
   }
 
   .explore-header {
@@ -694,9 +694,10 @@ a{
   }
 
   .explore-card {
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #fff;
     display: flex;
+    margin-top: 1.5rem;
     flex-grow: 1;
     justify-items: center;
     align-items: start;
